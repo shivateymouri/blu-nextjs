@@ -190,7 +190,7 @@ export default function () {
                   loop
                   muted
                   playsInline
-                  className="bg-transparent h-auto"
+                  className="bg-none h-auto"
                 >
                   <source src={current.video} type="video/webm" />
                   مرورگر شما از ویدیو پشتیبانی نمی‌کند.
