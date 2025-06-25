@@ -192,7 +192,7 @@ export default function () {
                   playsInline
                   className="bg-[#eef4fc] h-auto"
                 >
-                  <source src={current.video} type="video/webm" />
+                  <source src={current.video} type="video/webm" className="bg-transparent"/>
                   مرورگر شما از ویدیو پشتیبانی نمی‌کند.
                 </video>
               </div>
