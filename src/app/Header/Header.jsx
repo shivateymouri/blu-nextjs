@@ -20,7 +20,7 @@ export default function Header() {
       liColorFlag = true;
     }
   };
-  // e.target.className ="text-[#4e91e6]"
+
   return (
     <header className="w-full bg-white text-black border-b-1 border-gray-300 py-3 sticky top-0 right-0">
       <section className="flex lg:justify-between justify-around items-center lg:w-2/3 w-full m-auto">

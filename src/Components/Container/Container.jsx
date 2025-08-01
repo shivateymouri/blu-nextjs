@@ -7,9 +7,10 @@ import { MdSlowMotionVideo } from "react-icons/md";
 import rocket from "../../assets/images/card-image-rocket.png";
 import bank from "../../assets/images/card-image-bank.png";
 import safe from "../../assets/images/card-image-safety.png";
-// import defvid from "../../../public/videos/card-blue-video-cbg.webm"
-import blufront from "../../assets/images/card-blue-render-front.png";
-import bluback from "../../assets/images/card-blue-render-back.png";
+import mountain from "../../assets/images/mountain.png";
+import cash from "../../assets/images/blu-img-cashback.png"
+import cashbag from "../../assets/images/blu-img-bag.png"
+import { BsArrowUpLeft } from "react-icons/bs";
 const colorsData = {
   blue: {
     video: "/videos/card-blue-video-cbg.webm",
@@ -58,12 +59,15 @@ const colorsData = {
 export default function () {
   const [selectedColor, setSelectedColor] = useState("blue");
   const current = colorsData[selectedColor];
+  const _onMouseMove = (e)=>{
+    e.target.addEventListener ('mouseEnter', ()=>{
 
+    })
+  }
   return (
     <div className="relative">
       <Header />
       <div className="bg-white text-black">
-        {/* head top  */}
         <div className="flex justify-center items-center flex-col gap-4 py-10">
           <div className="flex flex-col justify-center items-center *:text-[40px] *:font-extrabold *:lg:text-[80px]">
             <div className="flex gap-3">
@@ -154,7 +158,7 @@ export default function () {
         {/* امن  */}
 
         {/* end of blu specialities */}
-        
+
         {/* بلو فقط آبی نیست  */}
         <div className="w-full p-3 flex flex-col justify-center items-center gap-3">
           <h2 className="text-[25px] font-extrabold">بلو فقط آبی نیست</h2>
@@ -192,7 +196,11 @@ export default function () {
                   playsInline
                   className="bg-[#eef4fc] h-auto"
                 >
-                  <source src={current.video} type="video/webm" className="bg-transparent"/>
+                  <source
+                    src={current.video}
+                    type="video/webm"
+                    className="bg-transparent"
+                  />
                   مرورگر شما از ویدیو پشتیبانی نمی‌کند.
                 </video>
               </div>
@@ -222,6 +230,77 @@ export default function () {
           </div>
         </div>
         {/* بلو فقط آبی نیست  */}
+        <div>
+          <div className="w-full p-6 flex flex-col justify-center items-center gap-3">
+            <h2 className="text-[25px] font-extrabold">با بلو پس‌انداز کنید</h2>
+          </div>
+          <div className="lg:w-2/3 w-full m-auto flex flex-col justify-center items-center py-5 p-3 gap-3">
+            <div className="w-full justify-center items-center gap-3 flex flex-col lg:flex-row *:w-full *:lg:w-1/2 *:rounded-2xl *:lg:h-[470px] *:h-[520px]">
+              <div className="bg-[#e5f7f4] flex flex-col">
+                <div className="p-5 py-10 text-right flex flex-col gap-3">
+                  <h3 className="font-extrabold text-[25px]">
+                    سود تو بیگ باکسه
+                  </h3>
+                  <p>
+                    با ساخت حساب بلند مدت در اپلیکیشن بلو برای سرمایه‌گذاری در ۳
+                    ماه ۱۲ درصد، ۶ ماه ۱۷ درصد و برای ۱۲ ماه تا ۲۰/۵ درصد سود
+                    دریافت کنید.
+                  </p>
+                </div>
+                <div className="flex flex-col items-end px-5">
+                  <Image
+                    src={mountain}
+                    alt="big-box"
+                    className="big-box w-[220px] flex object-cover"
+                  />
+                </div>
+                  <div className="flex flex-col items-start w-[60px] h-[60px] bg-white rounded-full mr-2 mb-2">
+                    <a href="" className="w-full h-full flex justify-center items-center text-[#4e91e6] text-[20px]"><BsArrowUpLeft /></a>
+                  </div>
+              </div>
+              <div className="bg-[#fbf2f3]">
+                <div className="p-5 py-10 text-right flex flex-col gap-3">
+                  <h3 className="font-extrabold text-[25px]">
+                    لذت برگشت پول
+                  </h3>
+                  <p>
+                  با خرید روزانه از فروشگاه‌های طرف قرارداد یا درصدی از خرید را تخفیف می‌گیرید یا درصدی از مبلغ به حساب شما برمی‌گردد.
+                  </p>
+                </div>
+                <div className="flex flex-col items-end px-5">
+                  <Image
+                    src={cash}
+                    alt="cash"
+                    className="w-[220px] flex object-cover"
+                  />
+                </div>
+                  <div className="flex flex-col items-start w-[60px] h-[60px] bg-white rounded-full mr-2 mb-2">
+                    <a href="" className="w-full h-full flex justify-center items-center text-[#4e91e6] text-[20px]"><BsArrowUpLeft /></a>
+                  </div>
+              </div>
+            </div>
+            <div className="w-full rounded-2xl bg-[#f2f1f9]">
+              <div className="p-5 py-10 text-right flex flex-col gap-3">
+                  <h3 className="font-extrabold text-[25px]">
+                    وام، ولی دست یافتنی
+                  </h3>
+                  <p className="lg:w-1/2">
+                  بدون ضامن و وثیقه در کمتر از ۷ دقیقه وام سریع و آسان بلو را دریافت کنید. با میانگین حساب خود در ۳ ماه متوالی می‌توانید از ۳ تا ۴۰ میلیون وام بگیرید.
+                  </p>
+                </div>
+                <div className="flex flex-col items-end px-5">
+                  <Image
+                    src={cashbag}
+                    alt="cashbag-vam"
+                    className="big-box w-[320px] flex object-cover"
+                  />
+                </div>
+                  <div className="flex flex-col items-start w-[60px] h-[60px] bg-white rounded-full mr-2 mb-2">
+                    <a href="" className="w-full h-full flex justify-center items-center text-[#4e91e6] text-[20px]"><BsArrowUpLeft /></a>
+                  </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
